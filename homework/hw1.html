@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 1 for J2EE Web Application development</title>
+
+    <style>
+        li {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        a {
+            color: darkblue;
+            text-decoration: overline;
+        }
+
+        .operator {
+            margin-right: 50px;
+        }
+    </style>
+
+    <script>
+        function add() {
+            var x = document.getElementById("label_x").value;
+            var y = document.getElementById("label_y").value;
+            document.getElementById("label_result").value = parseInt(x) + parseInt(y);
+        }
+        function minus() {
+            var x = document.getElementById("label_x").value;
+            var y = document.getElementById("label_y").value;
+            document.getElementById("label_result").value = x - y;
+        }
+        function multiply() {
+            var x = document.getElementById("label_x").value;
+            var y = document.getElementById("label_y").value;
+            document.getElementById("label_result").value = x * y;
+        }
+        function divide() {
+            var x = document.getElementById("label_x").value;
+            var y = document.getElementById("label_y").value;
+            document.getElementById("label_result").value = x / y;
+        }
+    </script>
+
+</head>
+
+<body onLoad="document.getElementById('last-name').focus()">
+<div style="color:purple; font-size:36px; font-family:monospace; font-weight:bold; font-style:italic">
+    <p style="text-align: center">Simple Calculator</p>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <td><label for="label_x">X:</label><input id="label_x" type="text" size="40"/></td>
+        </tr>
+        <tr>
+            <td><label for="label_y">Y:</label><input id="label_y" type="text" size="40"/></td>
+        </tr>
+        <tr>
+            <td><label for="label_result">Answer:</label><input id="label_result" type="text" size="40" readonly/></td>
+        </tr>
+        <tr>
+            <td><input class="operator" type="button" name="add" value="+" onclick="add()"/>
+                <input class="operator" type="button" name="minus" value="-" onclick="minus()"/>
+                <input class="operator" type="button" name="multiply" value="*" onclick="multiply()"/>
+                <input class="operator" type="button" name="divide" value="/" onclick="divide()"/>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
